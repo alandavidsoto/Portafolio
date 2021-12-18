@@ -5,11 +5,9 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'airbnb',
-    'plugin:jsx-a11y/recommended',
-    'plugin:react-hooks/recommended',
-    'prettier',
-    ,
+    'standard',
+    'plugin:prettier/recommended',
+    'prettier'
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -18,12 +16,11 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module'
   },
-  plugins: ['react', 'react-hooks', 'prettier'],
+  plugins: ['react', 'prettier'],
   rules: {
-    'prettier/prettier': 'error',
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     semi: ['error', 'always'],
-    quotes: ['error', 'single'],
-    'func-names': ['error', 'as-needed']
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'prettier/prettier': 'error'
   }
 };
