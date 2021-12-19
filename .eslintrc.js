@@ -13,11 +13,12 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     },
-    ecmaVersion: 13,
+    ecmaVersion: 12,
     sourceType: 'module'
   },
   plugins: ['react', 'prettier'],
   rules: {
+    'no-unused-vars': 1,
     semi: ['error', 'always'],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',

@@ -1,13 +1,11 @@
 import React from 'react';
-
+import { Container } from '@chakra-ui/react';
+import Header from './components/header';
 const App = () => {
-  const apli = () => {
-    console.log('dxd');
-  };
   return (
-    <button type="button" className="App" onClick={apli}>
-      asdasd
-    </button>
+    <Container className="App" maxW="full">
+      <Header />
+    </Container>
   );
 };
 
