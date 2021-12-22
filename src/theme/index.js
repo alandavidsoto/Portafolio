@@ -8,7 +8,7 @@ const config = {
 const theme = extendTheme({
   config,
   fonts: {
-    /* heading: 'Coda', */
+    heading: 'ubuntu',
     coda: 'Coda'
   }
 });

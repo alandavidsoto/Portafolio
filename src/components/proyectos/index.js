@@ -1,0 +1,40 @@
+import { Heading, useMediaQuery } from '@chakra-ui/react';
+import React from 'react';
+import data from '../help/data';
+import Card from './Card';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Autoplay } from 'swiper';
+import 'swiper/css/bundle';
+const Proyectos = () => {
+  return (
+    <section>
+      <Heading size="2xl" my={5}>
+        Proyectos
+      </Heading>
+      <Swiper
+        modules={[EffectCoverflow, Autoplay]}
+        effect={'coverflow'}
+        grabCursor={true}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false
+        }}
+        centeredSlides={true}
+        spaceBetween={50}
+        slidesPerView={3}
+        loop={true}
+      >
+        {data.map((elemento) => (
+          <SwiperSlide key={elemento.id}>
+            <Card elemento={elemento} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
+};
+
+export default Proyectos;
