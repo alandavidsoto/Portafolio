@@ -3,7 +3,7 @@ import React from 'react';
 import data from '../help/data';
 import Card from './Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Autoplay } from 'swiper';
+import { EffectCoverflow, Autoplay, Scrollbar } from 'swiper';
 import 'swiper/css/bundle';
 const Proyectos = () => {
   return (
@@ -12,7 +12,7 @@ const Proyectos = () => {
         Proyectos
       </Heading>
       <Swiper
-        modules={[EffectCoverflow, Autoplay]}
+        modules={[EffectCoverflow, Autoplay, Scrollbar]}
         effect={'coverflow'}
         grabCursor={true}
         coverflowEffect={{
@@ -22,13 +22,14 @@ const Proyectos = () => {
           modifier: 1,
           slideShadows: false
         }}
+        scrollbar={{ draggable: true }}
         centeredSlides={true}
         spaceBetween={50}
         slidesPerView={3}
         loop={true}
       >
         {data.map((elemento) => (
-          <SwiperSlide key={elemento.id}>
+          <SwiperSlide key={elemento.id} style={{ marginRight: '0px' }}>
             <Card elemento={elemento} />
           </SwiperSlide>
         ))}

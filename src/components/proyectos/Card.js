@@ -69,7 +69,7 @@ const Card = ({ elemento }) => {
           target="_blank"
           leftIcon={<MdOutlinePhonelink />}
           colorScheme="messenger"
-          variant="solid"
+          variant="outline"
         >
           Página
         </Button>
