@@ -13,10 +13,10 @@ const MenuDesktop = ({ toggleColorMode }) => {
         </Text>
       </Box>
 
-      <Box display="flex" justifyContent="space-between" flex={7}>
+      <Box display="flex" justifyContent="space-between" flex={5}>
         <Text fontSize="lg">
           <Link href="#sobreMi" style={{ textDecoration: 'none' }}>
-            ¿Quien Soy?
+            Sobre Mi
           </Link>
         </Text>
         <Text fontSize="lg">
@@ -26,7 +26,7 @@ const MenuDesktop = ({ toggleColorMode }) => {
         </Text>
         <Text fontSize="lg">
           <Link href="#CV" style={{ textDecoration: 'none' }}>
-            Descarga mi CV
+            Mi CV
           </Link>
         </Text>
         <Text fontSize="lg">

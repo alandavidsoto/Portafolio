@@ -1,16 +1,32 @@
-import { Text } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 const Inicio = () => {
   return (
-    <section>
-      <Text fontSize="9xl" fontFamily="ubuntu" align="center">
+    <Box
+      as="section"
+      h="100vh"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+    >
+      <Text
+        fontSize={['6xl', '8xl', '9xl']}
+        fontFamily="ubuntu"
+        align="center"
+        color="purple.400"
+      >
         Hola
       </Text>
-      <Text fontSize="4xl" align="center">
-        Me llamo Alan David Soto y me dedico al Desarrollador Web Front-end
+      <Text fontSize={['xl', '2xl', '4xl']} align="center" fontFamily="coda">
+        Me llamo Alan David Soto y me dedico al Desarrollo Web Front-end
       </Text>
-    </section>
+      <Flex justifyContent="center" gap={4}>
+        <SiLinkedin size="2em" />
+        <SiGithub size="2em" />
+      </Flex>
+    </Box>
   );
 };
 

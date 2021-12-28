@@ -24,13 +24,13 @@ const MenuMobile = ({ toggleColorMode }) => {
         />
         <MenuList>
           <MenuItem>
-            <Link href="#sobreMi">¿Quien Soy?</Link>
+            <Link href="#sobreMi">Sobre Mi</Link>
           </MenuItem>
           <MenuItem>
             <Link href="#proyectos">Proyectos</Link>
           </MenuItem>
           <MenuItem>
-            <Link href="#CV">Descarga mi CV</Link>
+            <Link href="#CV">Mi CV</Link>
           </MenuItem>
           <MenuItem>
             <Link href="#contacto">Contacto</Link>

@@ -13,15 +13,15 @@ const Card = ({ elemento }) => {
       boxShadow="base"
       rounded="base"
       w="100%"
-      h="100%"
-      borderRadius="base"
+      h="400px"
+      borderRadius="xl"
       maxW="360px"
       margin="0px auto"
     >
-      <Box overflow="hidden">
+      <Box overflow="hidden" h="45%">
         <Image src={elemento.imagen} w="100%" h="100%" objectFit="cover" />
       </Box>
-      <Box p={1}>
+      <Box p={1} h="30%">
         <Box display="flex" flexWrap="wrap" alignItems="baseline" mt="1">
           {elemento.keywords.map((word) => (
             <Badge
@@ -39,11 +39,11 @@ const Card = ({ elemento }) => {
         </Box>
         <Box
           mt="2"
-          fontWeight="semibold"
           as="h3"
           lineHeight="tall"
           isTruncated
           fontSize="xl"
+          fontFamily="ubuntu"
         >
           {elemento.nombre}
         </Box>
@@ -52,7 +52,7 @@ const Card = ({ elemento }) => {
           <Text>{truncate(elemento.descripcion)}</Text>
         </Box>
       </Box>
-      <Flex justifyContent="space-around" alignItems="center" my="2">
+      <Flex justifyContent="space-around" alignItems="center" my="2" h="20%">
         <Button
           leftIcon={<BsGithub />}
           as={Link}

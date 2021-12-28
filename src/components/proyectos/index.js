@@ -1,16 +1,15 @@
-import { Heading, useMediaQuery } from '@chakra-ui/react';
+import { Grid, Heading, Image, useMediaQuery } from '@chakra-ui/react';
 import React from 'react';
 import data from '../help/data';
 import Card from './Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Autoplay, Scrollbar } from 'swiper';
 import 'swiper/css/bundle';
+import Titulo from '../titulo';
 const Proyectos = () => {
   return (
     <section>
-      <Heading size="2xl" my={5}>
-        Proyectos
-      </Heading>
+      <Titulo texto="Proyectos" />
       <Swiper
         modules={[EffectCoverflow, Autoplay, Scrollbar]}
         effect={'coverflow'}

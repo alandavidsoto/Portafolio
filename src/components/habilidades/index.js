@@ -13,6 +13,7 @@ import {
   SiReact,
   SiSass
 } from 'react-icons/si';
+import Titulo from '../titulo';
 const Habilidades = () => {
   const tecnologias = [
     { nombre: 'HTML', component: SiHtml5 },
@@ -27,9 +28,7 @@ const Habilidades = () => {
   ];
   return (
     <div>
-      <Heading size="2xl" my={5}>
-        Tecnologias
-      </Heading>
+      <Titulo texto="Tecnologias" />
       <Flex
         wrap="wrap"
         columnGap="20px"
@@ -56,7 +55,7 @@ const Habilidades = () => {
             >
               <Icon.component
                 className="icon-skill"
-                color="#444"
+                color="#805AD5"
                 title={Icon.nombre}
               />
               <Text mt={2} fontSize={['md', 'lg', 'xl']}>
