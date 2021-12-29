@@ -5,6 +5,8 @@ import Proyectos from './components/proyectos';
 import Habilidades from './components/habilidades';
 import Inicio from './components/inicio';
 import SobreMi from './components/sobreMi';
+import Contacto from './components/contacto';
+
 const App = () => {
   return (
     <Container className="App" maxW="container.xl">
@@ -13,6 +15,7 @@ const App = () => {
       <SobreMi />
       <Habilidades />
       <Proyectos />
+      <Contacto />
     </Container>
   );
 };
