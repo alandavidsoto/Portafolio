@@ -49,20 +49,38 @@ const Contacto = () => {
                 type="text"
                 id="nombre"
                 name="nombre"
-                placeholder="Email"
+                placeholder="Introduzca su Nombre"
               />
             </FormControl>
             <FormControl>
               <FormLabel htmlFor="apellido">Apellido</FormLabel>
-              <Field as={Input} type="text" id="apellido" name="apellido" />
+              <Field
+                as={Input}
+                type="text"
+                id="apellido"
+                name="apellido"
+                placeholder="Introduzca su Apellido"
+              />
             </FormControl>
             <FormControl>
               <FormLabel htmlFor="email">E-mail</FormLabel>
-              <Field as={Input} type="email" id="email" name="email" />
+              <Field
+                as={Input}
+                type="email"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
+              />
             </FormControl>
             <FormControl>
               <FormLabel htmlFor="telefono">Télefono</FormLabel>
-              <Field as={Input} type="tel" id="telefono" name="telefono" />
+              <Field
+                as={Input}
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Intruzca su numero de telefono/celular"
+              />
             </FormControl>
             <FormControl>
               <FormLabel htmlFor="consulta">Consulta</FormLabel>
@@ -70,6 +88,9 @@ const Contacto = () => {
                 id="consulta"
                 name="consulta"
                 onChange={handleChange}
+                placeholder="¿En que te puedo ayudar?"
+                resize="none"
+                style={{ height: '200px' }}
               ></Textarea>
             </FormControl>
             <Button mt={4} w="100%" type="submit">
