@@ -1,30 +1,36 @@
-import { Grid, Heading, Image, useMediaQuery } from '@chakra-ui/react';
+import { Box, Divider } from '@chakra-ui/react';
 import React from 'react';
 import data from '../help/data';
 import Card from './Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Autoplay, Scrollbar } from 'swiper';
+import { Autoplay } from 'swiper';
 import 'swiper/css/bundle';
 import Titulo from '../titulo';
 const Proyectos = () => {
   return (
-    <section>
+    <Box p={5}>
+      <a name="proyectos"></a>
       <Titulo texto="Proyectos" />
       <Swiper
-        modules={[EffectCoverflow, Autoplay, Scrollbar]}
-        effect={'coverflow'}
+        style={{ marginBottom: '1.25rem' }}
+        modules={[Autoplay]}
         grabCursor={true}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false
-        }}
-        scrollbar={{ draggable: true }}
         centeredSlides={true}
         spaceBetween={50}
-        slidesPerView={3}
+        breakpoints={{
+          400: {
+            slidesPerView: 1
+          },
+          600: {
+            slidesPerView: 2
+          },
+          900: {
+            slidesPerView: 3
+          },
+          1500: {
+            slidesPerView: 4
+          }
+        }}
         loop={true}
       >
         {data.map((elemento) => (
@@ -33,7 +39,8 @@ const Proyectos = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </section>
+      <Divider />
+    </Box>
   );
 };
 

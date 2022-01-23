@@ -12,7 +12,8 @@ import { Field, Form, Formik } from 'formik';
 import * as yup from 'yup';
 const Contacto = () => {
   return (
-    <Box>
+    <Box p={5}>
+      <a name="contacto"></a>
       <Titulo texto="Contacto" />
       <Formik
         initialValues={{
@@ -42,7 +43,7 @@ const Contacto = () => {
       >
         {({ handleChange }) => (
           <Form>
-            <FormControl>
+            <FormControl mb={4}>
               <FormLabel htmlFor="nombre">Nombre</FormLabel>
               <Field
                 as={Input}
@@ -52,7 +53,7 @@ const Contacto = () => {
                 placeholder="Introduzca su Nombre"
               />
             </FormControl>
-            <FormControl>
+            <FormControl mb={4}>
               <FormLabel htmlFor="apellido">Apellido</FormLabel>
               <Field
                 as={Input}
@@ -62,7 +63,7 @@ const Contacto = () => {
                 placeholder="Introduzca su Apellido"
               />
             </FormControl>
-            <FormControl>
+            <FormControl mb={4}>
               <FormLabel htmlFor="email">E-mail</FormLabel>
               <Field
                 as={Input}
@@ -72,7 +73,7 @@ const Contacto = () => {
                 placeholder="name@example.com"
               />
             </FormControl>
-            <FormControl>
+            <FormControl mb={4}>
               <FormLabel htmlFor="telefono">Télefono</FormLabel>
               <Field
                 as={Input}
@@ -82,7 +83,7 @@ const Contacto = () => {
                 placeholder="Intruzca su numero de telefono/celular"
               />
             </FormControl>
-            <FormControl>
+            <FormControl mb={4}>
               <FormLabel htmlFor="consulta">Consulta</FormLabel>
               <Textarea
                 id="consulta"

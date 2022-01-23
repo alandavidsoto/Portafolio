@@ -1,5 +1,12 @@
 import './habilidades.scss';
-import { Box, Flex, Heading, IconButton, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Divider,
+  Flex,
+  Heading,
+  IconButton,
+  Text
+} from '@chakra-ui/react';
 
 import React from 'react';
 import {
@@ -27,7 +34,8 @@ const Habilidades = () => {
     { nombre: 'Sass', component: SiSass }
   ];
   return (
-    <div>
+    <Box p={5}>
+      <a name="tecnologias"></a>
       <Titulo texto="Tecnologias" />
       <Flex
         wrap="wrap"
@@ -65,7 +73,8 @@ const Habilidades = () => {
           </IconButton>
         ))}
       </Flex>
-    </div>
+      <Divider />
+    </Box>
   );
 };
 

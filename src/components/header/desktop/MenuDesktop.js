@@ -2,7 +2,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { Box, Text, Link, Switch } from '@chakra-ui/react';
 import React from 'react';
 
-const MenuDesktop = ({ toggleColorMode }) => {
+const MenuDesktop = () => {
   return (
     <>
       <Box flex={4}>
@@ -20,13 +20,13 @@ const MenuDesktop = ({ toggleColorMode }) => {
           </Link>
         </Text>
         <Text fontSize="lg">
-          <Link href="#proyectos" style={{ textDecoration: 'none' }}>
-            Proyectos
+          <Link href="#tecnologias" style={{ textDecoration: 'none' }}>
+            Tecnologias
           </Link>
         </Text>
         <Text fontSize="lg">
-          <Link href="#CV" style={{ textDecoration: 'none' }}>
-            Mi CV
+          <Link href="#proyectos" style={{ textDecoration: 'none' }}>
+            Proyectos
           </Link>
         </Text>
         <Text fontSize="lg">
@@ -34,13 +34,6 @@ const MenuDesktop = ({ toggleColorMode }) => {
             Contacto
           </Link>
         </Text>
-        <Box>
-          <SunIcon />
-          &nbsp;
-          <Switch size="md" onChange={toggleColorMode}></Switch>
-          &nbsp;
-          <MoonIcon />
-        </Box>
       </Box>
     </>
   );

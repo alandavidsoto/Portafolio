@@ -4,7 +4,6 @@ import MenuDesktop from './desktop/MenuDesktop';
 import MenuMobile from './mobile/MenuMobile';
 
 const Header = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)');
   return (
     <Box
@@ -13,12 +12,9 @@ const Header = () => {
       alignItems="center"
       justifyContent="space-between"
       fontFamily={theme.fonts.coda}
+      className="header"
     >
-      {isLargerThan900 ? (
-        <MenuDesktop toggleColorMode={toggleColorMode} />
-      ) : (
-        <MenuMobile toggleColorMode={toggleColorMode} />
-      )}
+      {isLargerThan900 ? <MenuDesktop /> : <MenuMobile />}
     </Box>
   );
 };

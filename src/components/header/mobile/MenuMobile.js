@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-const MenuMobile = ({ toggleColorMode }) => {
+const MenuMobile = () => {
   return (
     <>
       <Menu>
@@ -43,13 +43,6 @@ const MenuMobile = ({ toggleColorMode }) => {
             Alan David Soto
           </Link>
         </Text>
-      </Box>
-      <Box>
-        <SunIcon />
-        &nbsp;
-        <Switch size="md" onChange={toggleColorMode}></Switch>
-        &nbsp;
-        <MoonIcon />
       </Box>
     </>
   );

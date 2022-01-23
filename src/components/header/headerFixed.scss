@@ -1,0 +1,20 @@
+.fixed {
+  width: 100%;
+  background: #805ad5;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  bottom: 0;
+  animation: fadeInHeader 300ms linear forwards;
+  z-index: 100;
+}
+@keyframes fadeInHeader {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
