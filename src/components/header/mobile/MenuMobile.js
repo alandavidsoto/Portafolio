@@ -38,7 +38,7 @@ const MenuMobile = () => {
         </MenuList>
       </Menu>
       <Box>
-        <Text fontFamily="mono" fontSize="2xl">
+        <Text fontFamily="coda" fontSize="2xl">
           <Link href="#" style={{ textDecoration: 'none' }}>
             Alan David Soto
           </Link>

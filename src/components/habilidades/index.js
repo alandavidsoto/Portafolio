@@ -21,6 +21,7 @@ import {
   SiSass
 } from 'react-icons/si';
 import Titulo from '../titulo';
+import { Zoom } from 'react-reveal';
 const Habilidades = () => {
   const tecnologias = [
     { nombre: 'HTML', component: SiHtml5 },
@@ -37,42 +38,44 @@ const Habilidades = () => {
     <Box p={5}>
       <a name="tecnologias"></a>
       <Titulo texto="Tecnologias" />
-      <Flex
-        wrap="wrap"
-        columnGap="20px"
-        rowGap="20px"
-        justifyContent="center"
-        mb={5}
-        maxW="1300px"
-        mx="auto"
-      >
-        {tecnologias.map((Icon) => (
-          <IconButton
-            width={[100, 150, 200]}
-            height={[100, 150, 200]}
-            key={Icon.nombre}
-          >
-            <Box
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-              alignItems="center"
-              width="100%"
-              height="100%"
-              /* fontSize={['md', '2xl']} */
+      <Zoom>
+        <Flex
+          wrap="wrap"
+          columnGap="20px"
+          rowGap="20px"
+          justifyContent="center"
+          mb={5}
+          maxW="1300px"
+          mx="auto"
+        >
+          {tecnologias.map((Icon) => (
+            <IconButton
+              width={[100, 150, 200]}
+              height={[100, 150, 200]}
+              key={Icon.nombre}
             >
-              <Icon.component
-                className="icon-skill"
-                color="#805AD5"
-                title={Icon.nombre}
-              />
-              <Text mt={2} fontSize={['md', 'lg', 'xl']}>
-                {Icon.nombre}
-              </Text>
-            </Box>
-          </IconButton>
-        ))}
-      </Flex>
+              <Box
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                alignItems="center"
+                width="100%"
+                height="100%"
+                /* fontSize={['md', '2xl']} */
+              >
+                <Icon.component
+                  className="icon-skill"
+                  color="#805AD5"
+                  title={Icon.nombre}
+                />
+                <Text mt={2} fontSize={['md', 'lg', 'xl']}>
+                  {Icon.nombre}
+                </Text>
+              </Box>
+            </IconButton>
+          ))}
+        </Flex>
+      </Zoom>
       <Divider />
     </Box>
   );

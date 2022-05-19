@@ -87,6 +87,16 @@ const data = [
   },
   {
     id: 9,
+    nombre: 'FULL-WALLET',
+    imagen:
+      'https://res.cloudinary.com/dcea83ydd/image/upload/v1652845688/portafolio/Capture1_zf8woy.png',
+    keywords: ['JS', 'React', 'Tailwind', 'NodeJS', 'MongoDB'],
+    descripcion: 'Billetera virtual',
+    github_url: 'https://full-wallet.herokuapp.com/',
+    sitio_url: 'https://full-wallet.herokuapp.com/'
+  },
+  {
+    id: 10,
     nombre: 'MAXIMUSGAMING',
     imagen:
       'https://res.cloudinary.com/dcea83ydd/image/upload/v1640213350/portafolio/MAXIMUSGAMING/Maximus_1_yhsnp7.png',

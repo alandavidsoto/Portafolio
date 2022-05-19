@@ -10,7 +10,7 @@ const Proyectos = () => {
   return (
     <Box p={5}>
       <a name="proyectos"></a>
-      <Titulo texto="Proyectos" />
+      <Titulo texto="Mis Proyectos" />
       <Swiper
         style={{ marginBottom: '1.25rem' }}
         modules={[Autoplay]}
