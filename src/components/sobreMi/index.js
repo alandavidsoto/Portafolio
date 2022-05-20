@@ -1,5 +1,5 @@
 import { Box, Divider, Grid, Image, Text } from '@chakra-ui/react';
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import Titulo from '../titulo';
 import '../header/headerFixed.scss';
 

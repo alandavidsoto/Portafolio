@@ -1,12 +1,5 @@
 import './habilidades.scss';
-import {
-  Box,
-  Divider,
-  Flex,
-  Heading,
-  IconButton,
-  Text
-} from '@chakra-ui/react';
+import { Box, Divider, Flex, IconButton, Text } from '@chakra-ui/react';
 
 import React from 'react';
 import {

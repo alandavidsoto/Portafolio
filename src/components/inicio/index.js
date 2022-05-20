@@ -1,4 +1,4 @@
-import { Box, Flex, Link, LinkBox, Text } from '@chakra-ui/react';
+import { Box, Flex, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { Fade } from 'react-reveal';

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Box, Container, Divider, Grid } from '@chakra-ui/react';
+import React from 'react';
+import { Box, Grid } from '@chakra-ui/react';
 import Header from './components/header';
 import Proyectos from './components/proyectos';
 import Habilidades from './components/habilidades';
@@ -11,7 +11,7 @@ import Footer from './components/footer';
 
 const App = () => {
   return (
-    <Box className="App" maxWidth={'1950px'}>
+    <Box className="App" maxWidth={'1950px'} margin="auto">
       <Header />
       <Inicio />
       <SobreMi />

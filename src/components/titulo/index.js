@@ -1,5 +1,4 @@
-import { LinkIcon } from '@chakra-ui/icons';
-import { Heading, Icon, IconButton } from '@chakra-ui/react';
+import { Heading } from '@chakra-ui/react';
 import React from 'react';
 
 const Titulo = ({ texto }) => {
