@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Link, LinkBox, Text } from '@chakra-ui/react';
 import React from 'react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { Fade } from 'react-reveal';
@@ -28,10 +28,31 @@ const Inicio = () => {
           Me llamo Alan David Soto y me dedico al Desarrollo Web Front-end
         </Fade>
       </Text>
-      <Flex justifyContent="center" gap={4}>
+      <Flex justifyContent="center" gap={4} mt={4}>
         <Fade left cascade>
-          <SiLinkedin size="2em" />
-          <SiGithub size="2em" />
+          <Link
+            href="http://www.linkedin.com/in/alandavidsoto"
+            target="_blank"
+            style={{ textDecoration: 'none' }}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+          >
+            <SiLinkedin size="2em" />
+            <Text>Linkedin</Text>
+          </Link>
+          <Link
+            href="https://github.com/alandavidsoto"
+            target="_blank"
+            style={{ textDecoration: 'none' }}
+            textAlign="center"
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+          >
+            <SiGithub size="2em" />
+            <Text>Github</Text>
+          </Link>
         </Fade>
       </Flex>
     </Box>
