@@ -34,6 +34,8 @@ const Inicio = () => {
             href="http://www.linkedin.com/in/alandavidsoto"
             target="_blank"
             style={{ textDecoration: 'none' }}
+            position="relative"
+            className="underDinamic"
             display="flex"
             flexDirection="column"
             alignItems="center"
@@ -49,6 +51,8 @@ const Inicio = () => {
             display="flex"
             flexDirection="column"
             alignItems="center"
+            position="relative"
+            className="underDinamic"
           >
             <SiGithub size="2em" />
             <Text>Github</Text>

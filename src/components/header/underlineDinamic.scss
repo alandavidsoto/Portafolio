@@ -1,0 +1,24 @@
+.underDinamic {
+  text-decoration: none;
+  &:hover {
+    &::after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      background-color: #ccc;
+      animation: underline 300ms ease-in 1 forwards;
+    }
+  }
+}
+
+@keyframes underline {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
