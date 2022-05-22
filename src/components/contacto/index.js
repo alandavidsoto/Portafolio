@@ -14,6 +14,14 @@ import { Field, Form, Formik } from 'formik';
 import * as yup from 'yup';
 import { Slide } from 'react-reveal';
 const Contacto = () => {
+  const encode = (formData) => {
+    return Object.keys(formData)
+      .map(
+        (key) =>
+          encodeURIComponent(key) + '=' + encodeURIComponent(formData[key])
+      )
+      .join('&');
+  };
   return (
     <Slide left>
       <Box p={5}>
@@ -42,6 +50,14 @@ const Contacto = () => {
           })}
           onSubmit={(formData, actions) => {
             actions.resetForm();
+
+            fetch('/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: encode({ 'form-name': 'contact', ...formData })
+            })
+              .then(() => alert('Success!'))
+              .catch((error) => alert(error));
           }}
         >
           {({ handleChange, errors, touched }) => (
@@ -161,7 +177,8 @@ const Contacto = () => {
                 </GridItem>
                 <GridItem mb={4} colSpan={2}>
                   <FormLabel htmlFor="consulta">Consulta</FormLabel>
-                  <Textarea
+                  <Field
+                    as={Textarea}
                     id="consulta"
                     name="consulta"
                     onChange={handleChange}
@@ -170,7 +187,7 @@ const Contacto = () => {
                     style={{ height: '150px' }}
                     gridColumn={'2'}
                     position={'relative'}
-                  ></Textarea>
+                  ></Field>
                   {errors.consulta && touched.consulta && (
                     <Text
                       fontSize={'sm'}
