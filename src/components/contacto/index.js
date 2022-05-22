@@ -5,6 +5,7 @@ import {
   Grid,
   GridItem,
   Input,
+  Text,
   Textarea
 } from '@chakra-ui/react';
 import React from 'react';
@@ -27,33 +28,31 @@ const Contacto = () => {
             consulta: ''
           }}
           validationSchema={yup.object({
-            nombre: yup
-              .string()
-              .required('No puedes dejar el campo email vacío'),
-            apellido: yup
-              .string()
-              .required('No puedes dejar el campo email vacío'),
+            nombre: yup.string().required('Escriba su nombre'),
+            apellido: yup.string().required('No puedes dejar este campo vacío'),
             email: yup
               .string()
               .email('Introduzca un email válido')
-              .required('No puedes dejar el campo email vacío'),
-            telefono: yup.number().integer().required(),
-            consulta: yup
-              .string()
-              .required('No puedes dejar el campo email vacío')
+              .required('Debes ingresar un email'),
+            telefono: yup
+              .number('Solo se permite numeros')
+              .typeError('Solo se permite numeros')
+              .required('Digite su teléfono'),
+            consulta: yup.string().required('Escriba su mensaje')
           })}
-          onSubmit={(form) => {
-            console.log(form);
+          onSubmit={(formData, actions) => {
+            actions.resetForm();
           }}
         >
-          {({ handleChange }) => (
-            <Form>
+          {({ handleChange, errors, touched }) => (
+            <Form netlify>
               <Grid
                 templateColumns={{
                   base: '1fr',
                   lg: 'repeat(2,1fr)'
                 }}
                 columnGap={'4'}
+                rowGap={'3'}
               >
                 <GridItem
                   mb={4}
@@ -61,6 +60,7 @@ const Contacto = () => {
                     base: '2',
                     lg: '1'
                   }}
+                  position={'relative'}
                 >
                   <FormLabel htmlFor="nombre">Nombre</FormLabel>
                   <Field
@@ -70,6 +70,15 @@ const Contacto = () => {
                     name="nombre"
                     placeholder="Introduzca su Nombre"
                   />
+                  {errors.nombre && touched.nombre && (
+                    <Text
+                      fontSize={'sm'}
+                      color={'red.300'}
+                      position={'absolute'}
+                    >
+                      {errors.nombre}
+                    </Text>
+                  )}
                 </GridItem>
                 <GridItem
                   mb={4}
@@ -77,6 +86,7 @@ const Contacto = () => {
                     base: '2',
                     lg: '1'
                   }}
+                  position={'relative'}
                 >
                   <FormLabel htmlFor="apellido">Apellido</FormLabel>
                   <Field
@@ -86,6 +96,15 @@ const Contacto = () => {
                     name="apellido"
                     placeholder="Introduzca su Apellido"
                   />
+                  {errors.apellido && touched.apellido && (
+                    <Text
+                      fontSize={'sm'}
+                      color={'red.300'}
+                      position={'absolute'}
+                    >
+                      {errors.apellido}
+                    </Text>
+                  )}
                 </GridItem>
                 <GridItem
                   mb={4}
@@ -93,6 +112,7 @@ const Contacto = () => {
                     base: '2',
                     lg: '1'
                   }}
+                  position={'relative'}
                 >
                   <FormLabel htmlFor="email">E-mail</FormLabel>
                   <Field
@@ -102,6 +122,15 @@ const Contacto = () => {
                     name="email"
                     placeholder="name@example.com"
                   />
+                  {errors.email && touched.email && (
+                    <Text
+                      fontSize={'sm'}
+                      color={'red.300'}
+                      position={'absolute'}
+                    >
+                      {errors.email}
+                    </Text>
+                  )}
                 </GridItem>
                 <GridItem
                   mb={4}
@@ -109,6 +138,7 @@ const Contacto = () => {
                     base: '2',
                     lg: '1'
                   }}
+                  position={'relative'}
                 >
                   <FormLabel htmlFor="telefono">Télefono</FormLabel>
                   <Field
@@ -118,6 +148,15 @@ const Contacto = () => {
                     name="telefono"
                     placeholder="Intruzca su numero de telefono/celular"
                   />
+                  {errors.telefono && touched.telefono && (
+                    <Text
+                      fontSize={'sm'}
+                      color={'red.300'}
+                      position={'absolute'}
+                    >
+                      {errors.telefono}
+                    </Text>
+                  )}
                 </GridItem>
                 <GridItem mb={4} colSpan={2}>
                   <FormLabel htmlFor="consulta">Consulta</FormLabel>
@@ -129,7 +168,17 @@ const Contacto = () => {
                     resize="none"
                     style={{ height: '150px' }}
                     gridColumn={'2'}
+                    position={'relative'}
                   ></Textarea>
+                  {errors.consulta && touched.consulta && (
+                    <Text
+                      fontSize={'sm'}
+                      color={'red.300'}
+                      position={'absolute'}
+                    >
+                      {errors.consulta}
+                    </Text>
+                  )}
                 </GridItem>
                 <GridItem
                   mt={4}
