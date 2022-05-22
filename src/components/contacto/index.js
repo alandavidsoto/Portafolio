@@ -45,7 +45,8 @@ const Contacto = () => {
           }}
         >
           {({ handleChange, errors, touched }) => (
-            <Form netlify>
+            <Form name="contact" method="post">
+              <input type="hidden" name="form-name" value="contact" />
               <Grid
                 templateColumns={{
                   base: '1fr',
