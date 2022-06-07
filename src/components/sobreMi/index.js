@@ -30,12 +30,12 @@ const SobreMi = () => {
         <Text
           fontSize={{ base: 'lg', sm: 'xl', md: 'xl', lg: '2xl' }}
           fontFamily="ubuntu"
-          color="whiteAlpha.900"
+          color="whiteAlpha.700"
         >
-          Desarrollador Web Front-end con sólidos conocimientos de Javascript y
-          perfeccionándome actualmente en React.js. Me gustaría tener la
-          posibilidad de continuar aprendiendo y aportar mis conocimientos y
-          experiencia trabajando en equipo.
+          Desarrollador Web Fullstack con sólidos conocimientos de Javascript y
+          perfeccionándome actualmente en NodeJS. Me gustaría tener la
+          posibilidad de continuar aprendiendo, aportar mis conocimientos,
+          además de mi experiencia trabajando en equipo.
         </Text>
         <Image src="https://res.cloudinary.com/dcea83ydd/image/upload/v1628621618/portafolio/guy_cat_lksj1x.svg" />
       </Grid>

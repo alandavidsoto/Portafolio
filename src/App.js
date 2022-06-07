@@ -9,12 +9,16 @@ import SobreMi from './components/sobreMi';
 import Contacto from './components/contacto';
 import MiCV from './components/MiCV';
 import Footer from './components/footer';
+import ParticleBackground from './components/particles';
 
 const App = () => {
   return (
     <Box className="App" maxWidth={'1950px'} margin="auto">
-      <Header />
-      <Inicio />
+      <div className="container">
+        <ParticleBackground />
+        <Header />
+        <Inicio />
+      </div>
       <SobreMi />
       <Habilidades />
       <Proyectos />

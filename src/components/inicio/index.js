@@ -25,7 +25,7 @@ const Inicio = () => {
       </Text>
       <Text fontSize={['xl', '2xl', '4xl']} align="center" fontFamily="coda">
         <Fade left cascade>
-          Me llamo Alan David Soto y me dedico al Desarrollo Web Front-end
+          Me llamo Alan Soto y soy Desarrollador Web Fullstack
         </Fade>
       </Text>
       <Flex justifyContent="center" gap={4} mt={4}>

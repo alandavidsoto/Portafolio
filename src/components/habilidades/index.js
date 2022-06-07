@@ -11,7 +11,9 @@ import {
   SiJira,
   SiMysql,
   SiReact,
-  SiSass
+  SiSass,
+  SiNodedotjs,
+  SiMongodb
 } from 'react-icons/si';
 import Titulo from '../titulo';
 import { Zoom } from 'react-reveal';
@@ -25,7 +27,9 @@ const Habilidades = () => {
     { nombre: 'MySQL', component: SiMysql },
     { nombre: 'Javascript', component: SiJavascript },
     { nombre: 'React', component: SiReact },
-    { nombre: 'Sass', component: SiSass }
+    { nombre: 'Sass', component: SiSass },
+    { nombre: 'NodeJS', component: SiNodedotjs },
+    { nombre: 'MongoDB', component: SiMongodb }
   ];
   return (
     <Box p={5}>
