@@ -12,6 +12,28 @@ import {
 import React from 'react';
 
 const MenuMobile = () => {
+  const links = [
+    {
+      name: 'Sobre Mi',
+      href: '#sobreMi'
+    },
+    {
+      name: 'Tecnologias',
+      href: '#tecnologias'
+    },
+    {
+      name: 'Proyectos',
+      href: '#proyectos'
+    },
+    {
+      name: 'Mi CV',
+      href: '#CV'
+    },
+    {
+      name: 'Contacto',
+      href: '#contacto'
+    }
+  ];
   return (
     <>
       <Menu>
@@ -21,19 +43,23 @@ const MenuMobile = () => {
           icon={<HamburgerIcon />}
           variant="outline"
         />
+
         <MenuList>
-          <MenuItem>
-            <Link href="#sobreMi">Sobre Mi</Link>
-          </MenuItem>
-          <MenuItem>
-            <Link href="#proyectos">Proyectos</Link>
-          </MenuItem>
-          <MenuItem>
-            <Link href="#CV">Mi CV</Link>
-          </MenuItem>
-          <MenuItem>
-            <Link href="#contacto">Contacto</Link>
-          </MenuItem>
+          {links.map((el) => (
+            <MenuItem key={el.name}>
+              <Link
+                href={el.href}
+                style={{
+                  textDecoration: 'none',
+                  display: 'block',
+                  width: '100%',
+                  height: '100%'
+                }}
+              >
+                {el.name}
+              </Link>
+            </MenuItem>
+          ))}
         </MenuList>
       </Menu>
       <Box>

@@ -23,7 +23,7 @@ const Contacto = () => {
       .join('&');
   };
   return (
-    <Slide left>
+    <Slide right>
       <Box p={5}>
         <a name="contacto"></a>
         <Titulo texto="Contacto" />

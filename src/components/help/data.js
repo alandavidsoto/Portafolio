@@ -28,9 +28,19 @@ const data = [
       'https://res.cloudinary.com/dcea83ydd/image/upload/v1639932634/portafolio/CINEFLOW/Cineflow_1_q2rzwx.png',
     keywords: ['JS', 'php', 'Sass', 'HTML'],
     descripcion:
-      'En equipo, realizamos un Sitio web dinámico para la fundación Somos Más.',
+      'Sitio web sobre películas con simulación de compra de boletos',
     github_url: null,
     sitio_url: 'https://cinereflowarg2021.000webhostapp.com/index.php?'
+  },
+  {
+    id: 9,
+    nombre: 'FULL-WALLET',
+    imagen:
+      'https://res.cloudinary.com/dcea83ydd/image/upload/v1652845688/portafolio/Capture1_zf8woy.png',
+    keywords: ['JS', 'React', 'Tailwind', 'NodeJS', 'MongoDB'],
+    descripcion: 'Aplicación web que funciona como una billetera virtual',
+    github_url: 'https://full-wallet.herokuapp.com/',
+    sitio_url: 'https://full-wallet.herokuapp.com/'
   },
   {
     id: 4,
@@ -84,16 +94,6 @@ const data = [
     descripcion: 'Página web creado en base a una mejora a otra tienda',
     github_url: 'https://github.com/alandavidsoto/MatrixRodamientos',
     sitio_url: 'https://alandavidsoto.github.io/MatrixRodamientos/index.html'
-  },
-  {
-    id: 9,
-    nombre: 'FULL-WALLET',
-    imagen:
-      'https://res.cloudinary.com/dcea83ydd/image/upload/v1652845688/portafolio/Capture1_zf8woy.png',
-    keywords: ['JS', 'React', 'Tailwind', 'NodeJS', 'MongoDB'],
-    descripcion: 'Billetera virtual',
-    github_url: 'https://full-wallet.herokuapp.com/',
-    sitio_url: 'https://full-wallet.herokuapp.com/'
   },
   {
     id: 10,

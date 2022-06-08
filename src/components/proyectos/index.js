@@ -1,22 +1,26 @@
+import './pagination.scss';
 import { Box, Divider } from '@chakra-ui/react';
 import React from 'react';
 import data from '../help/data';
 import Card from './Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
+import { Autoplay, Pagination } from 'swiper';
 import 'swiper/css/bundle';
 import Titulo from '../titulo';
+
 const Proyectos = () => {
   return (
     <Box p={5}>
       <a name="proyectos"></a>
       <Titulo texto="Mis Proyectos" />
       <Swiper
-        style={{ marginBottom: '1.25rem' }}
-        modules={[Autoplay]}
+        style={{ marginBottom: '1.25rem', height: '440px' }}
+        modules={[Autoplay, Pagination]}
         grabCursor={true}
         centeredSlides={true}
         spaceBetween={50}
+        pagination={{ clickable: true }}
+        /* navigation={{nextEl: "."}} */
         breakpoints={{
           400: {
             slidesPerView: 1

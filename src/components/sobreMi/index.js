@@ -5,6 +5,7 @@ import '../header/headerFixed.scss';
 
 const SobreMi = () => {
   const sobreMi = useRef();
+
   const scrollHeader = () => {
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {

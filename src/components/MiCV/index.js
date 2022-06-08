@@ -19,8 +19,9 @@ import { Slide } from 'react-reveal';
 const MiCV = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Slide right>
+    <Slide left>
       <Box p={5}>
+        <a name="CV"></a>
         <Titulo texto="Mi CV" />
         <Flex
           flexDirection="column"
@@ -29,7 +30,14 @@ const MiCV = () => {
           rowGap={2}
         >
           <Image src={logo} width="60%" height="70%" onClick={onOpen} />
-          <Button as={Link} href={CV_PDF} download="Alan Soto CV" width="100%">
+          <Button
+            as={Link}
+            href={CV_PDF}
+            download="Alan Soto CV"
+            width="300px"
+            mt={2}
+            style={{ textDecoration: 'none' }}
+          >
             Descargar CV
           </Button>
         </Flex>

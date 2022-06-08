@@ -5,7 +5,7 @@ import { MdOutlinePhonelink } from 'react-icons/md';
 
 const Card = ({ elemento }) => {
   const truncate = (text) =>
-    text.length > 70 ? `${text.substring(0, 70)}...` : text;
+    text.length > 100 ? `${text.substring(0, 70)}...` : text;
 
   return (
     <Box
@@ -17,11 +17,13 @@ const Card = ({ elemento }) => {
       borderRadius="xl"
       maxW="360px"
       margin="0px auto"
+      background={'#0005'}
+      padding={2}
     >
       <Box overflow="hidden" h="45%">
         <Image src={elemento.imagen} w="100%" h="100%" objectFit="cover" />
       </Box>
-      <Box p={1} h="30%">
+      <Box p={1} h="40%">
         <Box display="flex" flexWrap="wrap" alignItems="baseline" mt="1">
           {elemento.keywords.map((word) => (
             <Badge
@@ -52,14 +54,15 @@ const Card = ({ elemento }) => {
           <Text>{truncate(elemento.descripcion)}</Text>
         </Box>
       </Box>
-      <Flex justifyContent="space-around" alignItems="center" my="2" h="20%">
+      <Flex justifyContent="space-around" alignItems="end" /* my="2" */ h="15%">
         <Button
           leftIcon={<BsGithub />}
           as={Link}
           href={elemento.github_url}
           target="_blank"
           colorScheme="purple"
-          variant="solid"
+          variant="outline"
+          style={{ textDecoration: 'none' }}
         >
           Codigo
         </Button>
@@ -70,6 +73,7 @@ const Card = ({ elemento }) => {
           leftIcon={<MdOutlinePhonelink />}
           colorScheme="messenger"
           variant="outline"
+          style={{ textDecoration: 'none' }}
         >
           Página
         </Button>

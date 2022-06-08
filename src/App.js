@@ -14,17 +14,15 @@ import ParticleBackground from './components/particles';
 const App = () => {
   return (
     <Box className="App" maxWidth={'1950px'} margin="auto">
-      <div className="container">
-        <ParticleBackground />
-        <Header />
-        <Inicio />
-      </div>
+      <ParticleBackground />
+      <Header />
+      <Inicio />
       <SobreMi />
       <Habilidades />
       <Proyectos />
       <Grid templateColumns={{ base: '1fr', md: 'repeat(2,1fr)' }}>
-        <Contacto />
         <MiCV />
+        <Contacto />
       </Grid>
       <Footer />
     </Box>
